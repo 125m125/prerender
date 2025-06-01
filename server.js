@@ -8,6 +8,7 @@ pageDoneCheckInterval: 100,
 browserTryRestartPeriod: 360000000,
 });
 
+server.use(prerender.prometheus());
 server.use(prerender.sendPrerenderHeader());
 server.use(prerender.browserForceRestart());
 // server.use(prerender.blockResources());
